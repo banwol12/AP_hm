@@ -25,14 +25,14 @@ class Attractor {
     // Normalize vector (distance doesn't matter here, we just want this vector for direction)
     force.normalize();
     // Calculate gravitional force magnitude
-    let strength = (this.G * this.mass * m.mass) / (distance * distance);
+    let strength = (this.mass) / (distance * distance);
     // Get force vector --> magnitude * direction
     force.mult(strength);
     return force;
   }
 
   // Method to display
-  display() {
+  show() {
     ellipseMode(CENTER);
     strokeWeight(4);
     stroke(0);
